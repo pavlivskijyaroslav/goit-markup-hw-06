@@ -37,9 +37,11 @@ img {
   height: auto;
 }
 .container {
-  padding: 0 15px 0 15px;
-  max-width: 1158px;
-  margin: 0 auto;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-item-active {
@@ -100,7 +102,9 @@ button:focus {
 }
 .header {
   display: flex;
+  max-width: unset;
   justify-content: space-between;
+  align-items: center;
 }
 .span-logo {
   font-weight: 700;
@@ -172,6 +176,29 @@ button:focus {
 }
 .contact-item:focus {
   color: #404bbf;
+}
+
+.burger-menu {
+}
+
+.menu-btn {
+  all: unset;
+  width: 100%;
+  max-width: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.menu-btn:active,
+.menu-btn:focus {
+  background: none; /* прибирає фон при натисканні та фокусі */
+  outline: none; /* прибирає outline при фокусі */
 }
 
 .hero {
@@ -584,24 +611,30 @@ footer .span-logo {
 }
 
 .modal {
-  position: absolute;
   padding: 72px 24px 24px 24px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
-  max-width: 408px;
+  width: 100%;
+  /* max-width: 408px; */
+
+  max-height: 683px;
+}
+.modal-wrapper {
+  position: absolute;
+  max-width: 440px;
   top: 50%;
   left: 50%;
-  min-height: 584px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 16px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .close-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 40px;
+  right: 40px;
   margin: 0;
   width: 24px;
   height: 24px;
@@ -637,7 +670,8 @@ footer .span-logo {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
+  /* max-width: 360px; */
   gap: 8px;
 }
 
@@ -653,6 +687,8 @@ footer .span-logo {
 .form-field {
   position: relative;
   margin-bottom: 8px;
+  width: 100%;
+  /* max-width: 256px; */
 }
 
 .modal-form-label {
@@ -695,6 +731,7 @@ footer .span-logo {
 
 .modal-form-input {
   width: 100%;
+
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -753,16 +790,19 @@ footer .span-logo {
   letter-spacing: 0.04em;
   color: #8e8f99;
   cursor: pointer;
+  display: flex;
+  gap: 8px;
 }
 .checkbox-title-span {
-  width: 16px;
+  width: 100%;
+  max-width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -788,15 +828,63 @@ footer .span-logo {
   fill: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-item {
+    padding: 0 !important;
+  }
+  .features-title {
+    text-align: left;
+  }
+  .features-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 0;
+    justify-content: space-between;
+  }
+  .features-item {
+    width: calc(50% - 12px);
+  }
+}
+
 @media screen and (min-width: 1158px) {
+  .container {
+    padding: 0 15px 0 15px;
+    max-width: 1158px;
+    margin: 0 auto;
+  }
   .logo {
     margin-right: 76px;
+  }
+  .menu {
+    width: unset;
   }
   .menu ul {
     display: flex;
   }
   .contact ul {
     display: flex;
+    flex-direction: row;
+    gap: 40px;
   }
   .features-list {
     gap: 24px;
@@ -859,5 +947,12 @@ footer .span-logo {
   }
   .subcribe-email {
     min-width: 264px;
+  }
+  .menu-btn {
+    display: none;
+  }
+
+  .modal {
+    max-width: 408px;
   }
 }
