@@ -35,7 +35,7 @@
                 </ul>
             </address>
             <!-- <div class="burger-menu"> -->
-            <button class="menu-btn" type="button">
+            <button class="menu-btn" type="button" data-drawer-open>
                 <svg class="" width="24" height="24">
                     <use href="./images/icons.svg#icon-burger"></use>
                 </svg>
@@ -481,6 +481,58 @@
         </div>
     </div>
 
+
+    <div class="modal-burger-overlay" data-modal-drawer>
+        <button class="close-btn close-btn-burger" type="button" data-drawer-close>
+            <svg class="close-btn-image" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <nav class="burger-menu">
+            <ul class="burger-menu-list">
+                <li><a class="burger-menu-item menu-item-active" href="./index.html">Studio</a></li>
+                <li><a class="burger-menu-item" href="">Portfolio</a></li>
+                <li><a class="burger-menu-item" href="">Contacts</a></li>
+            </ul>
+            <div class="burger-menu-social">
+                <ul class="burger-menu-contact">
+                    <li class="burger-menu-contact-item">+11 (000) 111-11-11</li>
+                    <li class="burger-menu-contact-item">info@devstudio.com</li>
+                </ul>
+                <ul class="team-social-list">
+                    <li class="team-social-item">
+                        <a href="#" class="team-social-item-link">
+                            <svg class="team-social-item-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-item">
+                        <a href="#" class="team-social-item-link">
+                            <svg class="team-social-item-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-item">
+                        <a href="#" class="team-social-item-link">
+                            <svg class="team-social-item-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="team-social-item">
+                        <a href="#" class="team-social-item-link">
+                            <svg class="team-social-item-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
 
     <script src="./js/modal.js"></script>
 </body>
