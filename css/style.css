@@ -928,6 +928,47 @@ footer .span-logo {
   .features-item {
     width: calc(50% - 12px);
   }
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    gap: 62px 24px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .portfolio-list-item {
+    max-width: 356px;
+  }
+  .portfolio-list-img img {
+    max-width: 356px;
+    height: auto;
+  }
+  .portfolio-list {
+    row-gap: 72px;
+  }
+  .about-footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    padding-left: 108px;
+  }
+  .logo-footer {
+    text-align: left;
+  }
+  .about-social-text {
+    text-align: left;
+  }
+  .about-studio {
+    margin: 0;
+  }
+  .subcribe-form-text {
+    text-align: left;
+  }
+  .subcribe-form {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -989,8 +1030,8 @@ footer .span-logo {
   }
   .about-footer {
     display: flex;
-    align-items: baseline;
     flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0;
   }
   .about-social {
