@@ -218,7 +218,7 @@ button:focus {
   display: flex;
   justify-content: center;
   max-width: 1440px;
-  padding: 188px 0;
+  padding: 72px 0;
   margin: 0 auto;
 }
 @media (min-resolution: 192dpi) {
@@ -237,10 +237,10 @@ button:focus {
   align-items: center;
 }
 .hero-title {
-  max-width: 496px;
+  max-width: 216px;
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
@@ -271,7 +271,7 @@ button:focus {
 /* FEATURES SECTION START  */
 
 .features {
-  padding: 120px 0 120px;
+  padding: 96px 0 96px;
 }
 .features-list {
   display: flex;
@@ -316,7 +316,7 @@ button:focus {
 
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .team-title {
@@ -365,8 +365,8 @@ button:focus {
 }
 .team-social-list {
   display: flex;
+  padding: 16px 0;
   justify-content: center;
-  padding: 0 16px;
   gap: 24px;
 }
 .team-social-item {
@@ -395,7 +395,7 @@ button:focus {
 
 /* PORTFOLIO SECTION START */
 .portfolio {
-  padding: 120px 0 120px 0;
+  padding: 96px 0 96px 0;
 }
 
 .portfolio-title {
@@ -486,7 +486,7 @@ button:focus {
 
 .about {
   background: var(--navy-blue);
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .about-footer {
@@ -861,7 +861,9 @@ footer .span-logo {
   letter-spacing: 0.02em;
   color: #434455;
 }
-
+.burger-menu-contact-tel {
+  color: #4d5ae5;
+}
 .burger-menu-item {
   font-weight: 700;
   font-size: 36px;
@@ -880,6 +882,11 @@ footer .span-logo {
 }
 .is-open-drawer {
   left: 0;
+}
+
+.team-social-list-drawer {
+  justify-content: space-between;
+  padding: 0;
 }
 
 /* DRAWER WINDOW END*/
@@ -906,16 +913,22 @@ footer .span-logo {
     flex-direction: column;
     gap: 12px;
   }
-  .contact-item {
-    padding: 0 !important;
+  .contact-list a {
+    padding: 0;
+    font-size: 12px;
   }
   .hero {
+    padding: 112px 0;
     background-color: var(--navy-blue);
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-banner-tablet@1x.jpg);
+  }
+  .hero-title {
+    font-size: 56px;
+    max-width: 496px;
   }
   .features-title {
     text-align: left;
@@ -1006,13 +1019,20 @@ footer .span-logo {
     flex-direction: row;
     gap: 40px;
   }
+  .contact-list a {
+    font-size: 16px;
+  }
   .hero {
+    padding: 188px 0;
     background-color: var(--navy-blue);
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-banner-desktop@1x.jpg);
+  }
+  .features {
+    padding: 120px 0;
   }
   .features-list {
     gap: 24px;
@@ -1032,6 +1052,9 @@ footer .span-logo {
   .features-text {
     font-weight: 400;
   }
+  .team {
+    padding: 120px 0;
+  }
   .team-list {
     display: flex;
     flex-direction: row;
@@ -1040,6 +1063,9 @@ footer .span-logo {
   }
   .team-item {
     width: calc((100% - 3 * 24px) / 4);
+  }
+  .portfolio {
+    padding: 120px 0;
   }
   .portfolio-list {
     justify-content: flex-start;
@@ -1050,6 +1076,9 @@ footer .span-logo {
   }
   .portfolio-list-item {
     max-width: 360px;
+  }
+  .about {
+    padding: 100px 0;
   }
   .about-footer {
     display: flex;
